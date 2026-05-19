@@ -69,6 +69,10 @@ func main() {
 
 	// Define routes
 	app.Post("/order", orderHandler.CreateOrder)
+	app.Get("/orders", orderHandler.GetAllOrders)
+	app.Get("/order/:id", orderHandler.GetOrderByID)
+	app.Put("/order/:id", orderHandler.UpdateOrder)
+	app.Delete("/order/:id", orderHandler.DeleteOrder)
 
 	app.Listen(":8080")
 }
