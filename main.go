@@ -65,10 +65,10 @@ func main() {
 	// Set up the core service and adapters
 	orderRepo := adapters.NewGormOrderRepository(db)
 	orderService := core.NewOrderService(orderRepo)
-	orderHandler := adapters.NewHttpOrderHandler(orderService)
+	orderHandler := adapters.NewHTTPOrderHandler(orderService)
 
 	// Define routes
-	app.Post("/order", orderHandler.SSssss)
+	app.Post("/order", orderHandler.CreateOrder)
 
 	app.Listen(":8080")
 }

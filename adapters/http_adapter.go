@@ -6,15 +6,15 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
-type HttpOrderHandler struct {
+type HTTPOrderHandler struct {
 	service core.OrderService
 }
 
-func NewHttpOrderHandler(service core.OrderService) *HttpOrderHandler {
-	return &HttpOrderHandler{service: service}
+func NewHTTPOrderHandler(service core.OrderService) *HTTPOrderHandler {
+	return &HTTPOrderHandler{service: service}
 }
 
-func (h *HttpOrderHandler) SSssss(c *fiber.Ctx) error {
+func (h *HTTPOrderHandler) CreateOrder(c *fiber.Ctx) error {
 	var order core.Order
 	if err := c.BodyParser(&order); err != nil {
 		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "invalid request"})
