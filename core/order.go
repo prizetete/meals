@@ -6,4 +6,5 @@ type Order struct {
 	Total float64
 }
 
+// test pull latest
 // new conflict message
