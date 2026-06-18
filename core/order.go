@@ -7,3 +7,4 @@ type Order struct {
 }
 
 // new conflict message
+// test rebase
