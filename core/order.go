@@ -1,6 +1,6 @@
 package core
 
-// main branch msg update message 2
+// main branch msg
 type Order struct {
 	ID    uint
 	Total float64
